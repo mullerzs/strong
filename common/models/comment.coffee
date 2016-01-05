@@ -20,11 +20,10 @@ module.exports = (Comment) ->
       type : 'string' 
       
 
-  Comment.fts = (terms, cb) ->
+  Comment.fts = (terms = '', cb) ->
     # TODO: more sophisticated param handling
     terms = terms.split /\s+/ unless Array.isArray terms
     terms = terms.join ' & '
-    console.log 'TERMS: ' + terms
     Comment.dataSource.connector.execute \
       "SELECT * FROM comment WHERE tsv @@ to_tsquery($1)",
       [ terms ],

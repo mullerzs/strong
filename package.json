@@ -4,7 +4,8 @@
   "main": "server/server.js",
   "scripts": {
     "start": "node .",
-    "pretest": "jshint ."
+    "pretest": "jshint .",
+    "test": "mocha --compilers coffee:coffee-script/register"
   },
   "dependencies": {
     "compression": "^1.0.3",
@@ -17,7 +18,10 @@
     "serve-favicon": "^2.0.1"
   },
   "devDependencies": {
-    "jshint": "^2.5.6"
+    "jshint": "^2.5.6",
+    "mocha": "^2.3.4",
+    "should": "^8.0.2",
+    "supertest": "^1.1.0"
   },
   "repository": {
     "type": "",
