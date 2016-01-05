@@ -31,5 +31,9 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "comment": {
+    "dataSource": "postgres",
+    "public": true
   }
 }
